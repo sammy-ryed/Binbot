@@ -1,4 +1,4 @@
-# BinBot 🤖
+# BinBot
 
 > **BinBot** is a production-quality Python trading bot for the **Binance Futures Testnet (USDT-M Perpetuals)**.  
 > Features a clean CLI, structured logging, robust input validation, and support for four order types.
