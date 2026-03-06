@@ -1,11 +1,10 @@
-﻿# BinBot 🤖 — Binance Futures Testnet Trading Bot
+﻿# BinBot — Binance Futures Testnet Trading Bot
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Binance](https://img.shields.io/badge/Binance-Futures%20Testnet-F0B90B?style=for-the-badge&logo=binance&logoColor=black)
 ![Tests](https://img.shields.io/badge/Tests-132%20passed-brightgreen?style=for-the-badge&logo=pytest)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
 **A production-quality Python trading bot for Binance Futures Testnet (USDT-M Perpetuals).**  
 Clean architecture · Strict validation · Structured logging · Rich CLI · 132-test suite
@@ -49,14 +48,14 @@ Clean architecture · Strict validation · Structured logging · Rich CLI · 132
 
 | | Feature | Detail |
 |---|---|---|
-| 📈 | **Order types** | MARKET · LIMIT · STOP_MARKET · STOP_LIMIT |
-| ↕️ | **Sides** | BUY and SELL |
-| 🖥️ | **CLI** | Typer + Rich — coloured tables, spinners, interactive wizard |
-| 📋 | **Logging** | Structured file log — every request, response, and error |
-| 🛡️ | **Validation** | All inputs validated _before_ the network is touched |
-| ⚠️ | **Error handling** | API errors, network failures, and bad input — all handled |
-| 🔑 | **Security** | Credentials in `.env` — never hard-coded or logged |
-| 🧪 | **Tests** | 132 tests across 5 files — zero real network calls |
+| 1. | **Order types** | MARKET · LIMIT · STOP_MARKET · STOP_LIMIT |
+| 2. | **Sides** | BUY and SELL |
+| 3. | **CLI** | Typer + Rich — coloured tables, spinners, interactive wizard |
+| 4. | **Logging** | Structured file log — every request, response, and error |
+| 5. | **Validation** | All inputs validated _before_ the network is touched |
+| 6. | **Error handling** | API errors, network failures, and bad input — all handled |
+| 8. | **Security** | Credentials in `.env` — never hard-coded or logged |
+| 9. | **Tests** | 132 tests across 5 files — zero real network calls |
 
 ---
 
@@ -111,6 +110,20 @@ Binbot/
 │   • translates HTTP/network errors       │
 └──────────────────────────────────────────┘
 ```
+
+---
+
+## Documentation
+
+Full project documentation lives in the [`docs/`](docs/) folder:
+
+| Document | Description |
+|----------|-------------|
+| [docs/cli_reference.md](docs/cli_reference.md) | Every command, option, and example |
+| [docs/api_reference.md](docs/api_reference.md) | Full reference for every class and method in `bot/` |
+| [docs/architecture.md](docs/architecture.md) | Layer diagram, data flow, error handling strategy |
+| [docs/configuration.md](docs/configuration.md) | Environment variables, logging, pytest settings |
+| [docs/contributing.md](docs/contributing.md) | Dev setup, workflow, adding order types |
 
 ---
 
@@ -264,10 +277,10 @@ A full menu-driven experience:
 
 | Option | Short | Required | Description |
 |--------|-------|----------|-------------|
-| `--symbol` | `-s` | ✅ | Trading pair — must end in `USDT` (e.g. `BTCUSDT`) |
-| `--side` | | ✅ | `BUY` or `SELL` |
-| `--type` | `-t` | ✅ | `MARKET` \| `LIMIT` \| `STOP_MARKET` \| `STOP_LIMIT` |
-| `--quantity` | `-q` | ✅ | Quantity in base asset units (must be > 0) |
+| `--symbol` | `-s` | YES | Trading pair — must end in `USDT` (e.g. `BTCUSDT`) |
+| `--side` | | YES | `BUY` or `SELL` |
+| `--type` | `-t` | YES | `MARKET` \| `LIMIT` \| `STOP_MARKET` \| `STOP_LIMIT` |
+| `--quantity` | `-q` | YES | Quantity in base asset units (must be > 0) |
 | `--price` | `-p` | LIMIT, STOP_LIMIT | Limit price |
 | `--stop-price` | | STOP_MARKET, STOP_LIMIT | Stop trigger price |
 | `--tif` | | | Time-in-force: `GTC` (default) \| `IOC` \| `FOK` |
@@ -379,11 +392,7 @@ Binance Futures uses the internal type `STOP` for what is universally called a s
 | `pytest` | ≥ 8.0 | Test runner |
 | `pytest-cov` | ≥ 5.0 | Coverage reporting |
 
----
 
-<div align="center">
 
-Built with ❤️ for the Binance Futures Testnet · Python 3.10+ · MIT License
 
-</div>
 
