@@ -21,3 +21,5 @@ env/
 # IDE
 .vscode/
 .idea/
+
+tests/
