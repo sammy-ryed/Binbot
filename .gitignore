@@ -1,0 +1,23 @@
+# Environment / secrets
+.env
+
+# Logs (keep the directory, not the files)
+logs/*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
